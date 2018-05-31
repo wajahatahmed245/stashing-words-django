@@ -1,12 +1,11 @@
-{% extends "basicLayout.html" %} {% block title%} signup {%endblock%} 
-
-{% block content %}
+{% extends "basicLayout.html" %} {% block title%} signup {%endblock%} {% block content %}
 
 
 
 
-<form class="col-sm-9" action="/action_page.php">
-    <h2 id="signup" class="display-4">SignUp</h2>
+<form class="col-sm-9" action="" method="GET">
+
+    <h2 id="signup" class="display-4" style="color:rgb(76, 119, 175)">SignUp {{p1}}</h2>
     <hr>
     <div class="form-group">
         <label for="First-Name">First-Name:</label>
@@ -47,9 +46,8 @@
             </label>
         </div>
     </div>
+    <br>
 
-    <br>
-    <br>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
