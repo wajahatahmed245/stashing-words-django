@@ -12,6 +12,12 @@ titles={
           
         }
 
+def listToDict(listWithTuple):
+    name=listWithTuple[0][1]
+    adress=listWithTuple[0][3]
+    dictionary=dict(name=name,adress=adress)
+    return dictionary
+
 
 def hello(request):  
     return HttpResponse("<h2>Hello, Welcome to Django!</h2>")  
@@ -21,10 +27,10 @@ def hello(request):
 def index(request):
     T=mysql()
    
-    
+    #import pdb; pdb.set_trace() #for testing 
     template=loader.get_template('index.html')  
    
-    return HttpResponse(template.render())  
+    return HttpResponse(template.render(listToDict(T)))  
 
 
 
